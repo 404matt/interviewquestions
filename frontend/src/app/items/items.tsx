@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-const backendURL = process.env.REACT_APP_BACKEND_URL;
-
+type Item = {
+    id: number;
+    name: string;
+  };
 function ItemList() {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState<Item[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

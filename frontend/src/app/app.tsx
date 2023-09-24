@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import ResumeDialog from './resume-dialog/resume-dialog';
 import ItemList from './items/items';
 import RandomCatFact from './cat-facts/cat-facts';
+import ArtPieceList from './cat-art/cat-art';
 
 export function App() {
   return (
@@ -31,7 +32,7 @@ export function App() {
             </header>
             <ResumeDialog />
             <RandomCatFact />
-            <ItemList />
+            <ArtPieceList />
           </div>
       </Container>
     </div>

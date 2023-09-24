@@ -6,4 +6,4 @@ services:
       - ./index.html:/usr/share/nginx/html/index.html
       - ./assets:/usr/share/nginx/html/assets
     ports:
-      - "8080:80"
+      - "8081:80"

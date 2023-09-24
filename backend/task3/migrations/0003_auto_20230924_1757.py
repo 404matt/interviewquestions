@@ -4,9 +4,10 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    initial = True
 
     dependencies = [
-        ('task3', '0002_animal'),
+        ('task3'),
     ]
 
     operations = [
@@ -20,11 +21,5 @@ class Migration(migrations.Migration):
                 ('image_url', models.URLField(blank=True, null=True)),
                 ('description', models.TextField(blank=True, null=True)),
             ],
-        ),
-        migrations.DeleteModel(
-            name='Animal',
-        ),
-        migrations.DeleteModel(
-            name='Item',
         ),
     ]

@@ -26,7 +26,7 @@ class Command(BaseCommand):
             data = response.json()
             artworks = data.get('data', [])
 
-            # Convert API response to Django model instances
+            # Convert API response to Django model (ArtPiece)
             for artwork in artworks:
                 art_piece = ArtPiece(
                     title=artwork['title'],

@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    /* background: rgb(0,37,75);
+    background: radial-gradient(circle, rgba(0,37,75,1) 0%, rgba(16,165,231,1) 51%, rgba(0,37,75,1) 100%); */
+}
+.greeting_container{
+    align-self: center;     /* center vertically */
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    line-height:123.5%;
+    letter-spacing: 0.00938em;
+}
+svg {
+    width: 100%;  
+    height: auto; /* maintains aspect ratio */
+}
+.wrapper{
+    margin: auto;
+    display: flex;
+}
+.isolate{
+    isolation:isolate;
+}
+.blend {
+    mix-blend-mode: color-burn;
+}
+.beyond, .hello{
+    color:#00254b;
+}
+.md{
+    color: #10a5e7;
+}
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply animation to each circle */
+.logo:hover circle {
+    transform-origin: 150px 150px; /* center of the SVG */
+    animation: rotateCircle 5s linear infinite;
+}
+.logo{
+    transition: transform 0.3s ease-in-out; /* for a smoother start/end of the animation */
+
+}
+/* current limitation, animation skips to origin point when hover off, will need js listener to ease in and out. */

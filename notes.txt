@@ -1,0 +1,17 @@
+#WSL ENV
+    sudo apt update && upgrade
+    sudo apt install python3 python3-pip ipython3
+    sudo apt-get install postgresql postgresql-contrib
+#pip venv setup
+    pip install virtualenv
+    virtualenv venv
+    source venv/bin/activate 
+
+# django
+    pip install django
+    django-admin startproject api backend
+# postgres
+    pip install psycopg2
+
+#requirements
+    pip freeze > backend/requirements.txt

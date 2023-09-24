@@ -15,10 +15,12 @@
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
     "@swc/helpers": "~0.5.2",
+    "npx": "^10.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.7",
     "react-pdf": "^7.3.3",
+    "tsc": "^2.0.4",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

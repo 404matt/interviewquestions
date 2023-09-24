@@ -16,7 +16,7 @@
     "paths": {},
     "jsx": "react-jsx",
     "allowJs": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true
   },

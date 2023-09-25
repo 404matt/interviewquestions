@@ -24,6 +24,7 @@ Steps to run
 ### Known problems
     1. I am not checking for the database to be connected to the backend before populating, i'm simply sleeping for 10. This is not a good practice, but for sake of time I went with this approach. 
     2. If using vs code to develop the frontend, npm install should be ran since i am using a dedicated volume for node_modules. An other approach would be to run in a DevContainer.
+    3. if the Database needs to be debuged, I included PGAdmin in the containers
 
 ### Thanks!
     Thank you for reviewing my coding task, have a good day!

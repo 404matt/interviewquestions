@@ -17,8 +17,9 @@ class Command(BaseCommand):
             'q': 'cats',
             'query[term][is_public_domain]': 'true',
             'limit': n,
-            'fields': 'id,title,artist_title,date_start,image_id,thumbnail,description',
+            'fields': 'id,title,artist_title,date_start,image_id',
             # You can further include random sorting or any other parameters if needed
+            # Endpoints can be found here at https://api.artic.edu/docs/#endpoints
         }
 
         response = requests.get(API_ENDPOINT, params=params)
@@ -29,12 +30,11 @@ class Command(BaseCommand):
             # Convert API response to Django model (ArtPiece)
             for artwork in artworks:
                 art_piece = ArtPiece(
+                    id=artwork['id'],
                     title=artwork['title'],
                     artist=artwork['artist_title'],
                     date_created=artwork['date_start'],
-                    image_url=f"https://www.artic.edu/iiif/2/{artwork['image_id']}/full/843,/0/default.jpg" if artwork['image_id'] else None,
-                    description=artwork['description'],
-                )
+                    image_url=f"https://www.artic.edu/iiif/2/{artwork['image_id']}/full/843,/0/default.jpg" if artwork['image_id'] else None,                )
                 art_piece.save()
         else:
             print(f"Failed to fetch data. Status code: {response.status_code}")

@@ -25,7 +25,8 @@ function RandomCatFact() {
       };
 
     return (
-        <div>
+        <>
+        
             <Button variant="contained" color="primary" onClick={fetchCatFact}>
                 Get Random Cat Fact
             </Button>
@@ -36,11 +37,10 @@ function RandomCatFact() {
                     horizontal: 'left',
                 }}
                 open={open}
-                autoHideDuration={6000}
+                autoHideDuration={10000}
                 onClose={handleClose}
                 message={fact}
                 action={
-                    <>
                         <IconButton
                             size="small"
                             aria-label="close"
@@ -49,11 +49,10 @@ function RandomCatFact() {
                         >
                             <CloseIcon fontSize="small" />
                         </IconButton>
-                    </>
                 }
             />
-        </div>
-    );
+            </>
+                );
 }
 
 export default RandomCatFact;

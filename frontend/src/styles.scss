@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 .App {
     text-align: center;
+    width:100%;
   }
   
   
@@ -12,7 +13,6 @@
     font-family: Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
     display: flex;
     justify-content: center; /* center horizontally */
     align-items: center;     /* center vertically */
@@ -74,4 +74,18 @@
   .art-image{
     width:300px;
     height:auto;
+  }
+
+  .cat-actions {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px;
+
+  }
+  
+  .cat-actions :first-child {
+    margin-right: 10px; 
+  }
+  .cat-card{
+    margin: 10px 0;
   }

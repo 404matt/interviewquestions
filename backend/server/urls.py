@@ -18,6 +18,6 @@ from django.urls import include, path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/items/', views.get_items, name='get_items'),
+    path('api/items/', views.get_items, name='get_items'), #test to make sure djanjo is workign as intended
     path('task3/', include('task3.urls')),  # Include URLs from task3 app
 ]

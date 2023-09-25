@@ -25,13 +25,14 @@ SECRET_KEY = 'django-insecure--&60^#2bakl@-3-t1tc!a-1bi!n=1f)v)z9w^2-y_9+kj+q@*g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = True # Allow Credentials in CORS
 
 ALLOWED_HOSTS = [    
     "http://localhost:8000", 
     "http://backend:8000", 
     "localhost"
 ]
+#CORS for react and django
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React default dev server
     "http://frontend:3000",   # React service in Docker Compose

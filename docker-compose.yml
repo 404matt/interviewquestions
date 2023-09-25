@@ -3,10 +3,11 @@ version: '3.8'
 services:
   db:
     image: postgres:13
+    #command: ./docker-compose-up.sh  # Use the script as the command
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: mydatabase #simple for sake of time, should be using .env variables and or ansible vault for security 
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
 

@@ -8,7 +8,7 @@ function ItemList() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Using the service name from docker-compose as the hostname.
+        // Test to make sure CORS works with django backend
         fetch('http://localhost:8000/api/items')
             .then(response => response.json())
             .then(data => {
@@ -19,8 +19,7 @@ function ItemList() {
                 console.error("There was an error fetching the items", error);
                 setLoading(false);
             });
-    }, []);  // The empty array means this effect will only run once, similar to componentDidMount.
-
+    }, []);  
     if (loading) {
         return <div>Loading...</div>;
     }

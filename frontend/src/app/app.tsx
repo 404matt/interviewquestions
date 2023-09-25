@@ -10,10 +10,10 @@ import ArtPieceList from './cat-art/cat-art';
 
 export function App() {
   return (
-    <div>
-        <Container maxWidth="lg">
+    <Container maxWidth="lg">
           <div className="App">
             <header className="App-header">
+              {/* svg of logo */}
               <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" className="isolate logo">
                 {/* <!-- Background circle: top --> */}
                 <circle cx="150" cy="135" r="60" fill="#90ccf1" fill-opacity="1" className="blend top"/>
@@ -30,12 +30,15 @@ export function App() {
               <span className="animate1 hello">Hello</span> <span className="animate2 beyond">BEYOND</span><span className="animate3 md">MD</span>
               </Typography>
             </header>
+
+            {/* Task Components */}
             <ResumeDialog />
+            <div className="cat-actions">
             <RandomCatFact />
             <ArtPieceList />
+            </div>
           </div>
       </Container>
-    </div>
   );
 }
 
